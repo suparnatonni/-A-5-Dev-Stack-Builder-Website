@@ -1,57 +1,78 @@
-// import type { Technology } from "../../types/technologyTypes"
+import type { Technology } from "../types/technologyTypes";
 
-// interface TechnologyCardProps {
-//   technology: Technology
-//   handleAddToStack: (technology: Technology) => void
-//   stack: Technology[]
-// }
+interface TechnologyCardProps {
+  technology: Technology;
+  onAddToStack: (technology: Technology) => void;
+  isAdded: boolean;
+}
 
-// const TechnologyCard = ({
-//   technology,
-//   handleAddToStack,
-//   stack,
-// }: TechnologyCardProps) => {
+const TechnologyCard = ({
+  technology,
+  onAddToStack,
+  isAdded,
+}: TechnologyCardProps) => {
+  return (
+    <div className="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-lg transition">
 
-//   const isAdded = stack.some(
-//     (item) => item.id === technology.id
-//   )
+      {/* Icon + Badge */}
+      <div className="flex justify-between items-start mb-4">
+        <img
+          src={technology.icon}
+          alt={technology.name}
+          className="w-14 h-14 object-contain"
+        />
 
-//   return (
-//     <div className="border rounded-xl p-5">
+        <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">
+          {technology.badge}
+        </span>
+      </div>
 
-//       <img
-//         src={technology.icon}
-//         alt={technology.name}
-//         className="w-12 h-12"
-//       />
+      {/* Name */}
+      <h3 className="text-xl font-bold text-gray-800 mb-2">
+        {technology.name}
+      </h3>
 
-//       <h3 className="text-xl font-bold mt-3">
-//         {technology.name}
-//       </h3>
+      {/* Description */}
+      <p className="text-sm text-gray-600 leading-6 mb-4">
+        {technology.description}
+      </p>
 
-//       <p className="text-gray-600 mt-2">
-//         {technology.description}
-//       </p>
+      {/* Category + Difficulty */}
+      <div className="flex flex-wrap gap-2 mb-4">
+        <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs">
+          {technology.category}
+        </span>
 
-//       <div className="flex gap-2 mt-3">
-//         <span>{technology.category}</span>
-//         <span>{technology.difficulty}</span>
-//       </div>
+        <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">
+          {technology.difficulty}
+        </span>
+      </div>
 
-//       <p className="mt-3">
-//         ⭐ {technology.rating}
-//       </p>
+      {/* Rating */}
+      <div className="flex items-center gap-2 mb-5">
+        <span className="text-yellow-500 text-lg">
+          ★
+        </span>
 
-//       <button
-//         onClick={() => handleAddToStack(technology)}
-//         disabled={isAdded}
-//         className="mt-4 border px-4 py-2 rounded-lg"
-//       >
-//         {isAdded ? "✓ Added to Stack" : "Add to Stack"}
-//       </button>
+        <span className="font-semibold text-gray-700">
+          {technology.rating}
+        </span>
+      </div>
 
-//     </div>
-//   )
-// }
+      {/* Add Button */}
+      <button
+        onClick={() => onAddToStack(technology)}
+        disabled={isAdded}
+        className={`w-full py-2.5 rounded-full font-semibold transition ${
+          isAdded
+            ? "bg-gray-300 text-gray-600 cursor-not-allowed"
+            : "bg-purple-600 text-white hover:bg-purple-700"
+        }`}
+      >
+        {isAdded ? "✓ Added to Stack" : "Add to Stack"}
+      </button>
+    </div>
+  );
+};
 
-// export default TechnologyCard
+export default TechnologyCard;
