@@ -3,6 +3,7 @@ import Logo from "../../assets/logo-text.png";
 const Navber = () => {
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="container mx-auto px-4 h-20 hidden md:flex justify-between items-center">
            <img
           src={Logo}
@@ -30,7 +31,7 @@ const Navber = () => {
           </button>
 
         </div>
-       
+       </div>
       </div>
     </nav>
   );
