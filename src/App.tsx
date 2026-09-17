@@ -1,13 +1,10 @@
-import toast from "react-hot-toast";
+
+import Navber from './component/shared/Navber'
 
 const App = () => {
   return (
     <div>
-         <button onClick={() => toast.success("Successfully toasted!")}>
-        Click Me
-      </button>
-
-      <h2 className="bg-amber-600">hello</h2>
+   <Navber />
     </div>
   );
 };
