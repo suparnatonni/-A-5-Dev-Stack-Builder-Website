@@ -3,6 +3,7 @@ import Navber from "./component/shared/Navber";
 import Banner from "./component/shared/Banner";
 import Techs from "./component/TechSection/Techs";
 import type { Technology } from "./component/types/technologyTypes";
+import Footer from "./component/shared/Footer";
 
 const App = () => {
   const [technologies, setTechnologies] = useState<Technology[]>([]);
@@ -70,7 +71,7 @@ const App = () => {
 
         </section>
       </main>
-
+     <Footer />
     </div>
   );
 };
