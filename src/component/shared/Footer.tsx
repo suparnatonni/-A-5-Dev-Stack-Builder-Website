@@ -1,3 +1,4 @@
+import Logo from "../../assets/logo-text.png";
 import {
   FaGithub,
   FaTwitter,
@@ -7,22 +8,18 @@ import {
 const Footer = () => {
   return (
     <footer className="bg-white border-t border-gray-100 mt-16">
-
-      {/* Main Footer */}
       <div className="container mx-auto px-4 py-10">
+
+        {/* Main Footer */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
           {/* Brand */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-6 h-6 rounded-md bg-purple-500 text-white flex items-center justify-center text-xs font-bold">
-                DS
-              </div>
-
-              <h2 className="text-lg font-bold text-gray-800">
-                Dev <span className="text-pink-500">Stack</span>
-              </h2>
-            </div>
+          <div className="lg:col-span-1">
+            <img
+              src={Logo}
+              alt="Dev Stack"
+              className="h-10 w-auto mb-4"
+            />
 
             <p className="text-sm text-gray-500 leading-5 max-w-sm">
               Curated tools, technologies, and resources for developers
@@ -184,6 +181,7 @@ const Footer = () => {
           </div>
 
         </div>
+
       </div>
     </footer>
   );
