@@ -16,11 +16,7 @@ const TechnologyCard = ({
 
      
       <div className="flex justify-between items-start mb-4">
-        <img
-          src={technology.icon}
-          alt={technology.name}
-          className="w-14 h-14 object-contain"
-        />
+        <img src={technology.icon}  alt={technology.name} className="w-14 h-14 object-contain"/>
 
         <span className="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">
           {technology.badge}

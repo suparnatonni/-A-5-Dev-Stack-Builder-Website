@@ -41,15 +41,8 @@ const YourStack = ({
           
           <div className="space-y-3">
             {stack.map((technology) => (
-              <div
-                key={technology.id}
-                className="border border-gray-200 rounded-xl p-3 flex items-center gap-3"
-              >
-                <img
-                  src={technology.icon}
-                  alt={technology.name}
-                  className="w-10 h-10 object-contain"
-                />
+              <div key={technology.id} className="border border-gray-200 rounded-xl p-3 flex items-center gap-3" >
+                <img src={technology.icon}  alt={technology.name}  className="w-10 h-10 object-contain"/>
 
                 <div className="flex-1">
                   <h3 className="font-semibold text-gray-800 text-sm">
@@ -61,10 +54,7 @@ const YourStack = ({
                   </p>
                 </div>
 
-                <button
-                  onClick={() => onRemove(technology.id)}
-                  className="text-red-500 hover:text-red-700 font-bold text-lg"
-                >
+                <button  onClick={() => onRemove(technology.id)}  className="text-red-500 hover:text-red-700 font-bold text-lg">
                   ✕
                 </button>
               </div>
@@ -72,10 +62,7 @@ const YourStack = ({
           </div>
 
           
-          <button
-            onClick={onRemoveAll}
-            className="w-full mt-5 border border-red-300 text-red-500 hover:bg-red-50 py-2 rounded-full font-semibold"
-          >
+          <button onClick={onRemoveAll} className="w-full mt-5 border border-red-300 text-red-500 hover:bg-red-50 py-2 rounded-full font-semibold">
             Remove All
           </button>
         </>

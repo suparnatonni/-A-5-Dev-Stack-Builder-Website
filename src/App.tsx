@@ -41,10 +41,18 @@ const App = () => {
 
       <main>
         <section className="container mx-auto my-10 px-4">
+          <div className="mb-8">
+            <h1 className="text-3xl font-bold text-gray-900">
+              Explore the{" "}
+              <span className="text-pink-500">
+                Technologies
+              </span>
+            </h1>
 
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
-            Explore Technologies
-          </h2>
+            <p className="text-sm text-gray-500 mt-2">
+              Pick one technology category to build your ideal stack.
+            </p>
+          </div>
 
     
           {loading && (
