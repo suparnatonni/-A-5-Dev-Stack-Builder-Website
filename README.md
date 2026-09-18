@@ -1,7 +1,6 @@
 # 🚀 Dev Stack Builder
 
-Dev Stack Builder is a simple and responsive web application for exploring different development technologies and creating a personalized technology stack. Users can browse technologies, add them to their stack, remove individual technologies, or remove all selected technologies.
-
+Dev Stack Builder is a responsive web application where users can explore different development technologies and create their own personalized technology stack.
 ---
 
 ## ✨ Features
@@ -56,6 +55,8 @@ src/
 
 public/
 └── technologies.json
+---
+
 📊 Technology Data
 
 Technology information is stored separately in:
