@@ -14,7 +14,7 @@ const TechnologyCard = ({
   return (
     <div className="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-lg transition">
 
-      {/* Icon + Badge */}
+     
       <div className="flex justify-between items-start mb-4">
         <img
           src={technology.icon}
@@ -27,39 +27,31 @@ const TechnologyCard = ({
         </span>
       </div>
 
-      {/* Name */}
+     
       <h3 className="text-xl font-bold text-gray-800 mb-2">
         {technology.name}
       </h3>
-
-      {/* Description */}
       <p className="text-sm text-gray-600 leading-6 mb-4">
         {technology.description}
       </p>
-
-      {/* Category + Difficulty */}
       <div className="flex flex-wrap gap-2 mb-4">
         <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs">
           {technology.category}
         </span>
-
         <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">
           {technology.difficulty}
         </span>
       </div>
-
-      {/* Rating */}
       <div className="flex items-center gap-2 mb-5">
         <span className="text-yellow-500 text-lg">
           ★
         </span>
-
         <span className="font-semibold text-gray-700">
           {technology.rating}
         </span>
       </div>
 
-      {/* Add Button */}
+      
       <button
         onClick={() => onAddToStack(technology)}
         disabled={isAdded}

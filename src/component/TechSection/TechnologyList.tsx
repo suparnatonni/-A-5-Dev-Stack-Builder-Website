@@ -19,7 +19,9 @@ const TechnologyList = ({
           key={technology.id}
           technology={technology}
           onAddToStack={onAddToStack}
-          isAdded={stack.some((item) => item.id === technology.id)}
+          isAdded={stack.some(
+            (item) => item.id === technology.id
+          )}
         />
       ))}
     </div>
