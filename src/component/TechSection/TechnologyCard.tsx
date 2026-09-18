@@ -66,7 +66,7 @@ const TechnologyCard = ({
         className={`w-full py-2.5 rounded-full font-semibold transition ${
           isAdded
             ? "bg-gray-300 text-gray-600 cursor-not-allowed"
-            : "bg-purple-600 text-white hover:bg-purple-700"
+            : "bg-black text-white hover:bg-blue-700"
         }`}
       >
         {isAdded ? "✓ Added to Stack" : "Add to Stack"}
